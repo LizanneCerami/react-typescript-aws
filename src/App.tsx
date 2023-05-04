@@ -8,9 +8,9 @@ function App() {
   const [ serverData, setServerData ] = React.useState([])
 
   React.useEffect(() => {
-    fetch('http://54.152.255.167:4000/')
+    fetch('http://54.152.255.167:4000')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => setServerData(data))
     .catch(err => console.error(err))
   },[])
 
@@ -20,7 +20,7 @@ function App() {
         <Hello firstName='Liz' lastName='Cerami'/>
         <Form />
         {/*@ts-ignore */}
-        {serverData && serverData.map(eachDog => <p>{eachDog.name} - {eachDog}</p>)}
+        {serverData && serverData.map(eachDog => <p>{eachDog.name} - {eachDog.age}</p>)}
       </header>
     </div>
   );
