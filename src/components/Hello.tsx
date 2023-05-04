@@ -5,7 +5,7 @@ export const Hello = ({ firstName, lastName, age }:HelloProps) => {
 
     <>
       <h1>
-        Good Morning, { firstName } { lastName }
+        Good Aternoon, { firstName } { lastName }
       </h1>
     </>
   )
